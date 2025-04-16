@@ -1,8 +1,8 @@
 <template>
   <div id="container-principal" class="d-flex justify-content-center align-items-center">
     <div class="text-center">
-      <h1>{{ titulo }}</h1>
-      <div class="input-group mt-3 mb-3">
+      <h1 class="titulo-principal">{{ titulo }}</h1>
+      <div class="input-group mt-4 mb-3">
         <div class="input-group-prepend">
           <div class="input-group-text">
             <input type="text" class="form-control" placeholder="Digite algo..." aria-label="Input group example"
@@ -12,7 +12,7 @@
       </div>
       <div class="d-flex gap-3">
         <div>
-          <button id="botao-limpar" class="btn btn-secondary btn-sm" @click="adicionarTarefa">Adicionar Tarefa</button>
+          <button class="btn btn-secondary btn-sm" @click="adicionarTarefa">Adicionar Tarefa</button>
 
         </div>
         <div>
@@ -20,16 +20,17 @@
         </div>
       </div>
 
-      <h2>{{ Subtitulo }}</h2>
-      <ul>
-        <li v-for="tarefa in listaTarefas" :key="tarefa">
-          {{ tarefa }} <button @click="excluirItemLista(tarefa)">X</button>
-        </li>
-      </ul>
+      <div class="mt-3">
+        <h2 class="titulo-secundario">{{ Subtitulo }}</h2>
+        <ul>
+          <li v-for="tarefa in listaTarefas" :key="tarefa">
+            {{ tarefa }} <button @click="excluirItemLista(tarefa)">X</button>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -73,16 +74,27 @@ export default {
 <style scoped>
 #container-principal {
   height: 100vh;
-  background-color: #d1cbc0;
+  background-color: gradient(to bottom, #99c3a6, #f0f0f0);
+  background: -webkit-linear-gradient(90deg, #6dc488, #009eba, #3f65af);
 
 }
 
 .text-center {
-  border: solid, 0px, black;
+  border: solid, 0px;
   border-radius: 10px;
   padding: 15vh;
-  background-color: #c8e3c5;
+  background-color: #99c3a6;
+  opacity: 85%;
+  box-shadow: 0px 0px 10px #000;
 }
 
-#botao-limpar {}
+.titulo-principal {
+  font-size: 40px;
+  color: #254f9f;
+}
+
+.titulo-secundario {
+  font-size: 30px;
+  color: #254f9f;
+}
 </style>
