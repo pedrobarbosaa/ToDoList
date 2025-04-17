@@ -10,7 +10,7 @@
           </div>
         </div>
       </div>
-      <div class="d-flex gap-3">
+      <div class="d-flex gap-3 align-items-center justify-content-center">
         <div>
           <button class="btn btn-secondary btn-sm" @click="adicionarTarefa">Adicionar Tarefa</button>
 
@@ -84,7 +84,7 @@ export default {
   border-radius: 10px;
   padding: 15vh;
   background-color: #99c3a6;
-  opacity: 85%;
+  opacity: 90%;
   box-shadow: 0px 0px 10px #000;
 }
 
@@ -96,5 +96,17 @@ export default {
 .titulo-secundario {
   font-size: 30px;
   color: #254f9f;
+}
+
+.form-control{
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0f0f0;
+}
+
+ul{
+  list-style-type: none
 }
 </style>
